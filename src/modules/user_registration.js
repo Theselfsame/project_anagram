@@ -2,7 +2,8 @@ import { chechForm } from "./login_check";
 import { closeWindow } from "./signup_tab";
 import { getLoginList } from "./exist_login_list";
 
-const USER_URL = 'http://localhost:3005/user'
+/* const USER_URL = 'http://localhost:3005/user' */
+const LOCAL_DATA = 'https://raw.githubusercontent.com/Theselfsame/project_anagram/main/src/data/data.json'
 
 const sendForm = async() => {
     if(chechForm()) {                                           //проверка на валидность формы
@@ -25,7 +26,7 @@ const sendForm = async() => {
             body: JSON.stringify(data)
         }
         try {
-            const response = await fetch(USER_URL, settings);
+            const response = await fetch(LOCAL_DATA.user, settings);
             const data = await response.json()
             regSuccess()
             setTimeout(closeWindow, 1000)

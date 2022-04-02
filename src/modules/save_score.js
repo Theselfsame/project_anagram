@@ -1,11 +1,9 @@
 import { getLoginList } from "./exist_login_list"
 
-const USER_URL = 'http://localhost:3005/user'
+const LOCAL_DATA = 'https://raw.githubusercontent.com/Theselfsame/project_anagram/main/src/data/data.json'
+/* const USER_URL = 'http://localhost:3005/user' */
 
 const savePositionTask = async(userId, result, level) => {
-    console.log(userId)
-    console.log(result)
-    console.log(level)
     let settings;
     if (level == 'easyScore') {
         settings = {
@@ -26,9 +24,11 @@ const savePositionTask = async(userId, result, level) => {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-                mediumScore: result
-            })
+            body: {
+                user : JSON.stringify({
+                    mediumScore: result
+                })
+            }
         }
     }
     if (level == 'hardScore') {
@@ -44,7 +44,7 @@ const savePositionTask = async(userId, result, level) => {
         }
     }
     try {
-        const fetchResult = await fetch(`${USER_URL}/${userId}`, settings);
+        const fetchResult = await fetch(LOCAL_DATA, settings);
         const data = await fetchResult.json();
         getLoginList(userId)
         return data;

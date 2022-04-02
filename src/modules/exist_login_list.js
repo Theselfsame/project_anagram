@@ -1,19 +1,20 @@
 import { getUserList } from "./set_score";
 import { showUserScore } from "./user_login";
 
-const USER_URL = 'http://localhost:3005/user';
+const LOCAL_DATA = 'https://raw.githubusercontent.com/Theselfsame/project_anagram/main/src/data/data.json'
 
 let loginList = []
 let usersData;
 
 const getLoginList = (userId) => {
-    fetch(USER_URL)
+    fetch(LOCAL_DATA)
     .then (
         res => {
             return res.json()
         }
     ).then(
         data => {
+            data = data.user
             usersData = data
             data.forEach(element => {
                 loginList.push(element.login);

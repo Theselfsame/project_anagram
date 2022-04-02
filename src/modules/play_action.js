@@ -1,7 +1,6 @@
 import { savePositionTask } from "./save_score";
 
-const WORDS_API = 'http://localhost:8080/api/words/words';
-const WORD_FROM_DATA = 'http://localhost:3005/words'
+const LOCAL_DATA = 'https://raw.githubusercontent.com/Theselfsame/project_anagram/main/src/data/data.json'
 
 //переменные счетчика ответов
 
@@ -62,7 +61,7 @@ function setDifficultyBtn () {
 
 const getWord = async () => {
     try {
-        const res = await fetch('http://localhost:3005/words')
+        const res = await fetch(LOCAL_DATA)
         return res.json();
     } catch (err) {
         throw new Error(`You got an error: ${err}`)
@@ -76,7 +75,8 @@ let wordList = [];
 // запись полученного списка слов
 
 const setWordList = async (difficulty) => {
-    const currentWordList = await getWord();
+    let currentWordList = await getWord();
+    currentWordList = currentWordList.words
     wordList = currentWordList[`${difficulty}`];
     setCurrentWord(wordList)
 }
