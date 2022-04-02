@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic);
+
+.main-wrapper{
+    display: flex;
+}
+.top-wrapper {
+    padding-top: 10px;
+    margin-left: 200px;
+    margin-top: 70px;
+    max-height: 320px;
+    width: 250px;
+    border: 2px solid;
+    background-color: bisque;
+    text-align: center;
+}
+.result-wrapper {
+    padding-top: 10px;
+    margin-left: 50px;
+    background-color: bisque;
+    margin-top: 70px;
+    min-height: 50px;
+    width: 720px;
+    border: 2px solid;
+    text-align: center;
+}
+.show-topfive {
+    width: auto;
+}
+.top-gamer {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.user-name {
+    width: 100px;
+    height: 26px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 4px;
+    margin-left: 10px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+.score-wrapper {
+    text-align: left;
+    display: block;
+    margin-left: 5px;
+    width: 99px;
+}
+
+.result-header {
+    font-weight: 700;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.level-header {
+    font-weight: 600;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    padding-left: 81px;
+    padding-right: 81px;
+}
+.result-levels {
+    display: flex;
+}
+.show-result {
+    margin-top: 10px;
+    margin-left: 19px;
+    min-height: 20px;
+}
+.column-wrapper {
+    display: flex;
+    position: relative;
+    left: 12px;
+}

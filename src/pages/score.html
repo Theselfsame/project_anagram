@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Anagram</title>
+</head>
+<body id="body">
+    <div class="loading">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    <div class="hide container">
+        <%= require('html-loader!../templates/header.html').default %>
+        <div class="main-wrapper">
+            <div class="top-wrapper">
+                <p class="result-header">ТОП 5 игроков</p>
+                <div class="show-topfive"></div>
+            </div>
+            <div class="result-wrapper">
+                <p class="result-header">лучшие результаты по уровням сложности</p>
+                <span class="level-header">лёгкий</span>
+                <span class="level-header">средний</span>
+                <span class="level-header">сложный</span>
+                <div class="result-levels">
+                    <div class="show-result show-easy"></div>
+                    <div class="show-result show-medium"></div>
+                    <div class="show-result show-hard"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

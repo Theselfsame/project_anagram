@@ -1,0 +1,61 @@
+<!--                                 play page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Anagram</title>
+<script defer src="play_page.bundle.js"></script></head>
+<body id="body">
+    <div class="loading">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    <div class="container hide">
+        <header class="header">
+    <img id="logo" src="1d1ba74f1f10f708b722.png" alt="logo">
+    <nav class="nav-wrapper">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="play.html">Играть</a></li>
+            <li class="nav-item"><a href="score.html">Счёт</a></li>
+            <li class="nav-item nav-login"><a href="#">Вход</a></li>
+        </ul>        
+        <div class="user-block">
+            <img class="person-logo" src="c2638d0046bb1432d234.png">
+        </div>
+        <a id="reg" href="#">Регистрация</a>
+        <p class="logo-name"></p>
+        <div class="tooltip">
+            <span class="tooltip-text tooltip-header"></span>
+            <span class="tooltip-text score-light"></span>
+            <span class="tooltip-text score-medium"></span>
+            <span class="tooltip-text score-hard"></span>
+          </div>
+    </nav>
+</header>
+
+        <div id="game-wrapper">
+            <section id="difficulty-wrapper">
+                <p id="difficulty-text">Уровень сложности</p>
+                <button class="dif-btn btn-light">Лёгкий<span class="dif-annotation">4 буквы</span></button>
+                <button class="dif-btn btn-medium">Средний<span class="dif-annotation">6 букв</span></button>
+                <button class="dif-btn btn-hard">Сложный<span class="dif-annotation">8 букв</span></button>
+            </section>
+            <section id="play-wrapper">
+                <div class="rule-wrapper">
+                    <p>Правила!</p>
+                    <p>1. Игра заключается в нахождении анаграмм к словам.</p>
+                    <p>2. Пройдите регистрацию и войдите в личный кабинет, чтобы достижения в игре сохранялись. Можно играть и не осуществляя вход, без сохранения результатов</p>
+                    <p>3. Вам нужно отгадать наибольшее количество слов за 20 секунд. По 2 балла за каждое слово. Ошибки отнимают 1 балл.</p>
+                    <p>4. После выбора уровня сложности появится кнопка "СТАРТ".</p>
+                    <p>5. Жмите на "СТАРТ", если готовы играть!</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
